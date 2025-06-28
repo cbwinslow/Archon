@@ -287,6 +287,15 @@ The Docker implementation consists of two containers:
 
 When running with Docker, the `run_docker.py` script automates building and starting both containers with the proper configuration.
 
+### Securing with Cloudflare Access
+
+Example configuration files are provided in the `deploy/` directory to run Archon behind a Cloudflare Tunnel with Traefik. This setup allows you to protect `archon.cloudcurio.cc` with OAuth via Cloudflare Access.
+
+1. Copy `deploy/.env.example` to `deploy/.env` and fill in your Cloudflare API token and tunnel token.
+2. Run `docker compose -f deploy/docker-compose.yml up -d` to start Archon, Traefik, and Cloudflare Tunnel.
+3. Optionally adapt `deploy/nginx.conf` or `deploy/Caddyfile` if you prefer those proxies instead of Traefik.
+
+
 ## Database Setup
 
 The Supabase database uses the following schema:

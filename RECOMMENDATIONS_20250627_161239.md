@@ -1,0 +1,3 @@
+- Consider adding automated tests for deployment scripts.
+- Provide instructions for OAuth configuration with specific providers (e.g., Google, GitHub) in the deployment guide.
+- Include continuous integration to validate Docker builds.

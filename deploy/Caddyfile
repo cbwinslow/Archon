@@ -1,0 +1,3 @@
+archon.cloudcurio.cc {
+    reverse_proxy archon:8501
+}
